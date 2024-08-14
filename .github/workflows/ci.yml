@@ -10,9 +10,14 @@ jobs:
   build: 
     runs-on: ubuntu-latest
 
+    defaults: 
+      run:   
+        shell: bash
+        working-directory: ./worksheet2/my-react-app
+        
     strategy: 
       matrix: 
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps: 
       - name: Checkout repository
